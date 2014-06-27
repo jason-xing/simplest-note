@@ -1,0 +1,72 @@
+除了这两个statement以外还有一个CallableStatement，以下文章《JDBC基础教程之CallableStatement》摘自网络：
+概述 
+CallableStatement对象为所有的DBMS提供了一种以标准形式调用已储存过程的方法。已储存过程储存在数据库中。
+对已储存过程的调用是CallableStatement对象所含的内容。这种调用是用一种换码语法来写的，有两种形式：一种形式带结果参，
+另一种形式不带结果参数。结果参数是一种输出(OUT)参数，是已储存过程的返回值。两种形式都可带有数量可变的输入（IN参数）、
+输出（OUT参数）或输入和输出（INOUT参数）的参数。问号将用作参数的占位符。
+在JDBC中调用已储存过程的语法如下所示。注意，方括号表示其间的内容是可选项；方括号本身并不是语法的组成部份。
+{call 过程名[(?, ?, ...)]} 
+返回结果参数的过程的语法为：
+{? = call 过程名[(?, ?, ...)]}
+不带参数的已储存过程的语法类似：
+{call 过程名}
+通常，创建CallableStatement对象的人应当知道所用的DBMS是支持已储存过程的，并且知道这些过程都是些什么。
+然而，如果需要检查，多种DatabaseMetaData方法都可以提供这样的信息。例如，如果DBMS支持已储存过程的调用，
+则supportsStoredProcedures方法将返回true，而getProcedures方法将返回对已储存过程的描述。
+CallableStatement继承Statement的方法（它们用于处理一般的SQL语句），还继承了PreparedStatement
+的方法（它们用于处理IN参）。
+CallableStatement中定义的所有方法都用于处理OUT参数或INOUT参数的输出部分（这句话道出了CallableStatement
+的特点）：注册OUT参数的JDBC类型（一般SQL类型）、从这些参数中检索结果，或者检查所返回的值是否为JDBC NULL。
+
+(1)、创建CallableStatement对象
+CallableStatement对象是用Connection方法prepareCall创建的。下例创建CallableStatement的实例，
+其中含有对已储存过程getTestData调用。该过程有两个变量，但不含结果参数：
+CallableStatementcstmt=con.prepareCall("{call getTestData(?,?)}");
+其中?占位符为IN、OUT还是INOUT参数，取决于已储存过程getTestData。
+
+(2)、IN和OUT参数
+将IN参数传给CallableStatement对象是通过setXXX方法完成的。该方法继承自PreparedStatement。
+所传入参数的类型决定了所用的setXXX方法（例如，用setFloat来传入float值等）。
+如果已储存过程返回OUT参数，则在执行CallableStatement对象以前必须先注册每个OUT参数的JDBC类型（这是必需的，
+因为某些DBMS要求JDBC类型）。注册JDBC类型是用registerOutParameter方法来完成的。语句执行完后，
+CallableStatement的getXXX方法将取回参数值。正确的getXXX方法是为各参数所注册的JDBC类型所对应的Java类型。
+换言之，registerOutParameter使用的是JDBC类型（因此它与数据库返回的JDBC类型匹配），
+而getXXX将之转换为Java类型。
+作为示例，下述代码先注册OUT参数，执行由cstmt所调用的已储存过程，然后检索在OUT参数中返回的值。方法getByte
+从第一个OUT参数中取出一个Java字节，而getBigDecimal从第二个OUT参数中取出一个BigDecimal对象（小数点后面带三位数）：
+CallableStatement cstmt = con.prepareCall("{call getTestData(?, ?)}");
+cstmt.registerOutParameter(1, java.sql.Types.TINYINT);
+cstmt.registerOutParameter(2, java.sql.Types.DECIMAL, 3);
+cstmt.executeQuery();
+byte x = cstmt.getByte(1);
+java.math.BigDecimal n = cstmt.getBigDecimal(2, 3);
+CallableStatement与ResultSet不同，它不提供用增量方式检索大OUT值的特殊机制。
+
+(3)、INOUT参数
+既支持输入又接受输出的参数（INOUT参数）除了调用registerOutParameter方法外，还要求调用适当的
+setXXX方法（该方法是从PreparedStatement继承来的）。setXXX方法将参数值设置为输入参数，
+而registerOutParameter方法将它的JDBC类型注册为输出参数。setXXX方法提供一个Java值，
+而驱动程序先把这个值转换为JDBC值，然后将它送到数据库中。这种IN值的JDBC类型和提供给registerOutParameter
+方法的JDBC类型应该相同。然后，要检索输出值，就要用对应的getXXX方法。例如，Java类型为byte的参数应该使用方法 
+setByte来赋输入值。应该给registerOutParameter提供类型为TINYINT的JDBC类型，同时应使用getByte来检索输出值。
+下例假设有一个已储存过程reviseTotal，其唯一参数是INOUT参数。方法setByte把此参数设为25，驱动程序将把它
+作为JDBC TINYINT类型送到数据库中。接着，registerOutParameter将该参数注册为JDBC TINYINT。执行完该已储存过程后，
+将返回一个新的JDBC TINYINT值。方法getByte将把这个新值作为Java byte类型检索。
+CallableStatement cstmt = con.prepareCall("{call reviseTotal(?)}");
+cstmt.setByte(1, 25);
+cstmt.registerOutParameter(1, java.sql.Types.TINYINT);
+cstmt.executeUpdate();
+byte x = cstmt.getByte(1);
+
+(4)、先检索结果，再检索OUT参数
+由于某些DBMS的限制，为了实现最大的可移植性，建议先检索由执行CallableStatement对象所产生的结果，
+然后再用CallableStatement.getXXX方法来检索OUT参数。如果CallableStatement对象返回
+多个ResultSet对象（通过调用execute方法），在检索OUT参数前应先检索所有的结果。
+这种情况下，为确保对所有的结果都进行了访问，必须对Statement方法getResultSet、getUpdateCount
+和getMoreResults进行调用，直到不再有结果为止。
+检索完所有的结果后，就可用CallableStatement.getXXX方法来检索OUT参数中的值。
+
+(5)、检索作为OUT参数的NULL值
+返回到OUT参数中的值可能会是JDBC NULL。当出现这种情形时，将对JDBC NULL值进行转换以使getXXX方法所返回
+的值为null、0或false，这取决于getXXX方法类型。对于ResultSet对象，要知道0或false是否源于JDBC NULL的唯一方法，
+是用方法wasNull进行检测。如果getXXX方法读取的最后一个值是JDBC NULL，则该方法返回true，否则返回flase。

@@ -1,0 +1,86 @@
+读网上《Apache-Maven-Plugins-Maven Site Plugin 3》记笔记
+一. Usage
+1.Generating a Site 
+mvn site(mvm site:site)命令，根据配置和src里内容生成一个网站的文件，输出到target/site目录。
+另外，还有心得如下：
+mvn site:site会读取src中site.xml配置文件，然后根据apt格式(.apt)文件、faq格式(.fml)文件、xdoc格式(.xml)文件生成网页文件。其中，apt格式文件是普通的文本文件，由固定符号、缩进等来控制生成的文件，这就类似于写wiki的文法；而faq格式、xdoc格式文件，它们由固定的xml元素来控制生成的文件，另外，site.xml也类似，是xml方式。
+如果想继续学习apt格式，那么建立archetypeArtifactId=maven-archetype-site项目，然后执行mvn site:site后生成有一个format.html，这个网页是个参考。
+2.Deploying a Site 
+mvn site:deploy命令，根据pom上的配置将上面输出的网站文件发布到一个服务器的某个目录上。
+3.Staging a Site 
+mvn site:stage命令，mvn site的一个新的goal，更新更牛x些。
+4.Running a Site 
+mvn site:run将网站发布到jetty中，启动服务，就可以访问了。
+
+二.Creating Content
+主要讲src中的文件的格式，以及如何编写等等。一旦完成了这些的编写，当执行mvn site的时候，本插件的默认goal(mvn site:site)就会根据这些格式的生成目录结构和html文件、css文件等。
+1.Documentation formats
++- src/
+   +- site/
+      +- apt/
+      |  +- index.apt
+      |
+      +- fml/
+      |  +- general.fml
+      |  +- faq.fml
+      |
+      +- xdoc/
+      |  +- other.xml
+      | 
+      +- site.xml
+其中，apt是wik-ilike format，fml是FAQ format，xdoc format被用在maven 1.x中。
+在执行mvn site:site之后，生成：
++- target/
+   +- site/
+      +- css/
+      |
+      +- images/
+      |
+      +- index.html
+      +- general.html
+      +- faq.html 
+            +- other.html
+2.Adding Extra Resources
+你可以增加css文件和images文件到相应的src目录中，然后在mvn site:site后，这些文件会到相应的target目录中，src中如下所示：
++- src/
+   +- site/
+      +- resources/
+         +- css/
+         |  +- site.css
+         |
+         +- images/ 
+            +- pic1.jpg
+3.Filtering 
+在2.0-beta-6之后，支持了velocity：在pom文件中定义了变量var1，在src中的各个格式的文件可以通过${var1}引用到该值。
+4.Internationalization(国际化)
+<project>
+  ...
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <locales>en,fr</locales>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  ... 
+</project>
+
++- src/
+   +- site/
+      +- apt/
+      |  +- index.apt     (Default version)
+      |
+      +- fr/
+      |  +- apt/
+      |     +- index.apt  (French version)
+      |
+      +- site.xml         (Default site descriptor) 
+            +- site_fr.xml      (French site descriptor)
+
+三.Configuring the Site Descriptor
+主要讲site.xml配置文件，配置site的框架，如网站logo、所有网页的header和footer、menus等(当然，主体(contents)部分是apt、fml、xdoc格式的文件生成的网页)。参照mysite项目的site.xml，有助于理解。

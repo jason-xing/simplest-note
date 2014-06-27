@@ -1,0 +1,69 @@
+1. Shiro在集成Web功能时采用的程序设计方法值得欣赏：定义一个ContextListener，在context create时，
+   创建一个名为WebEnvironment实例，作为Web功能的程序的全局变量，保存程序中用到的变量，然后定义的
+   Filters等均可访问、修改这个它。下面有节选：
+   The simplest way to integrate Shiro into any web application is to configure a Servlet 
+   ContextListener and Filter in web.xml that understands how to read Shiro's INI configuration. 
+   In Shiro 1.2 and later, standard web applications initialize Shiro by adding the following XML 
+   chunks to web.xml:
+   <listener>
+       <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
+   </listener>
+   ...
+   <filter>
+       <filter-name>ShiroFilter</filter-name>
+       <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
+   </filter>
+   <filter-mapping>
+       <filter-name>ShiroFilter</filter-name>
+       <url-pattern>/*</url-pattern>
+       <dispatcher>REQUEST</dispatcher> 
+       <dispatcher>FORWARD</dispatcher> 
+       <dispatcher>INCLUDE</dispatcher> 
+       <dispatcher>ERROR</dispatcher>
+   </filter-mapping>
+   Here is what the above config does:
+   The EnvironmentLoaderListener initializes a Shiro WebEnvironment instance (which contains everything Shiro needs to operate, 
+   including the SecurityManager) and makes it accessible in the ServletContext. If you need to obtain this WebEnvironment 
+   instance at any time, you can call WebUtils.getRequiredWebEnvironment(servletContext). 
+   The ShiroFilter will use this WebEnvironment to perform all necessary security operations for any filtered request. 
+   Finally, the filter-mapping definition ensures that all requests are filtered by the ShiroFilter, recommended for 
+   most web applications to ensure that any request can be secured.
+2. Shiro Web有个强大的功能体现在配置文件如：ini文件中的[urls]部分中，
+   The [urls] section allows you to do something that doesn't exist in any web framework that we've seen yet: the ability 
+   to define ad-hoc filter chains for any matching URL path in your application!
+   This is far more flexible, powerful and concise than how you define filter chains normally in web.xml.
+   URL_Ant_Path_Expression = Path_Specific_Filter_Chain   
+   [urls]
+   /index.html = anon
+   /user/create = anon
+   /user/** = authc
+   /admin/** = authc, roles[administrator]
+   /rest/** = authc, rest
+   /remoting/rpc/** = authc, perms["remote:invoke"]
+3. FIRST MATCH WINS policy
+   对于
+   /account/** = ssl, authc
+   /account/signup = anon
+   那么
+   If an incoming request is intended to reach /account/signup/index.html (accessible by all 'anon'ymous users), it will never 
+   be handled!. The reason is that the /account/** pattern matched the incoming request first and 'short-circuited' all remaining definitions.
+4. 截至到今天20121112，看了一下的文档：
+   Apache_Shiro_使用手册.doc
+   http://shiro.apache.org/10-minute-tutorial.html
+   http://shiro.apache.org/web.html
+   http://shiro.apache.org/java-authorization-guide.html
+
+5. Filter类
+   <1>. org.apache.shiro.web.filter包
+   AccessControlFilter继承自PathMatchingFilter。
+   <2>. org.apache.shiro.web.filter.authc包
+   AuthenticationFilter继承自org.apache.shiro.web.filter.AccessControlFilter，是该包里的大部分类的直接或间接父类。
+   AuthenticatingFilter继承自AuthenticationFilter，实现登录认证功能的一个Filter，它的子类还有：BasicHttpAuthenticationFilter、FormAuthenticationFilter
+   <3>. org.apache.shiro.web.filter.authz包
+   AuthorizationFilter继承自org.apache.shiro.web.filter.AccessControlFilter，是该包里的大部分类的直接或间接父类。
+   子类PermissionsAuthorizationFilter和RolesAuthorizationFilter分别实现了权限和角色的权限控制；
+   PermissionsAuthorizationFilter的子类HttpMethodPermissionFilter实现了PermissionsAuthorizationFilter + Action的权限控制；
+   子类HostFilter和PortFilter分别实现了主机和端口的权限控制；
+   PortFilter的子类SslFilter，实现了安全连接。
+   <4>. org.apache.shiro.web.filter.mgt包
+   包里的类实现了Filter和Filter Chain的管理等。

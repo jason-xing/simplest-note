@@ -1,0 +1,19 @@
+1. Acegi是一个能够为基于Spring的应用系统提供描述性安全保护的安全框架。它提供了一组可以在Spring
+   应用上下文中配置的Bean，充分利用了Spring对依赖注入和面向切面编程的支持。
+   当保护Web应用系统时，Acegi使用Servlet过滤器来拦截Servlet请求，以实施身份认证并强制安全性。
+   并且，在第11.4.1节你将会看到，Acegi采取了一种独特的机制来声明Servlet过滤器，使你可以使用
+   Spring IoC注入它所依赖的其他对象。
+   Acegi也能够通过保护方法调用在更底层的级别上强制安全性。使用Spring AOP，Aceg代理对象,
+   将“切面”应用于对象，以确保用户只有在拥有恰当授权时才能调用受保护的方法。无论你正在保护一个Web 
+   应用程序还是需要方法调用级别的安全性，Acegi都是使用如下几个组件完成的。
+   1>. 安全拦截器：起到过滤器的作用。
+   2>. 认证管理器：管认证的组件。
+   以下是认证管理器接口：
+   public interface AuthenticationManager {
+       public Authentication authenticate(Authentication authentication)
+           throws AuthenticationException;
+   }
+   它有一个主要的实现：ProviderManager，而它又可使用多个AuthenticationProvider，如：
+   daoAuthenticationProvider、passwordDaoProvider等，我们重写这些类即可。
+   3>. 访问决策管理器：决定是否可以访问某资源。
+   4>. 运行身份管理器：高级功能，暂不管。

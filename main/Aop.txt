@@ -1,0 +1,5 @@
+1. Aop(Aspect Oriented Programming)，面向方面(切面)编程。
+   有篇pdf文章写的非常的好《AOP的实现机制》。
+   Aop的实现方案有很多，其中利用JDK本身Dynamic Proxy(动态代理)机制是个常见的方案，对这种方案我
+   也写了个例子，见org.projectsample.test.dynamicproxy包中的类。另外，网上有个ppt
+   《Java动态接口代理技术》里面的代码跟这个类似，而且有解释，可以看看。

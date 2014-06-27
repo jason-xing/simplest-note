@@ -1,0 +1,343 @@
+1. 见./myquickstart
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart
+================================================================================
+[INFO] Archetype [org.apache.maven.archetypes:maven-archetype-quickstart:1.1] found in catalog remote
+Define value for property 'groupId': : com.mycompany
+Define value for property 'artifactId': : myquickstart
+Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'package':  com.mycompany: : com.mycompany.mypackage
+Confirm properties configuration:
+groupId: com.mycompany
+artifactId: myquickstart
+version: 1.0-SNAPSHOT
+package: com.mycompany.mypackage
+ Y: :
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.1
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.mycompany
+[INFO] Parameter: packageName, Value: com.mycompany.mypackage
+[INFO] Parameter: package, Value: com.mycompany.mypackage
+[INFO] Parameter: artifactId, Value: myquickstart
+[INFO] Parameter: basedir, Value: C:\Users\Jason\MavenArchetype
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: C:\Users\Jason\MavenArchetype\myquickstart
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1:25.802s
+[INFO] Finished at: Fri Apr 27 17:41:42 CST 2012
+[INFO] Final Memory: 10M/25M
+[INFO] ------------------------------------------------------------------------
+================================================================================
+C:\USERS\JASON\MAVENARCHETYPE\MYQUICKSTART
+│  pom.xml
+│
+└─src
+    ├─main
+    │  └─java
+    │      └─com
+    │          └─mycompany
+    │              └─mypackage
+    │                      App.java
+    │
+    └─test
+        └─java
+            └─com
+                └─mycompany
+                    └─mypackage
+                            AppTest.java
+                                                                                       
+2. 见./mywebapp
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp
+================================================================================
+[INFO] Archetype [org.apache.maven.archetypes:maven-archetype-webapp:1.0] found in catalog remote
+Define value for property 'groupId': : com.mycompany
+Define value for property 'artifactId': : mywebapp
+Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'package':  com.mycompany: : com.mycompany.mypackage
+Confirm properties configuration:
+groupId: com.mycompany
+artifactId: mywebapp
+version: 1.0-SNAPSHOT
+package: com.mycompany.mypackage
+ Y: :
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-web
+app:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.mycompany
+[INFO] Parameter: packageName, Value: com.mycompany.mypackage
+[INFO] Parameter: package, Value: com.mycompany.mypackage
+[INFO] Parameter: artifactId, Value: mywebapp
+[INFO] Parameter: basedir, Value: C:\Users\Jason\MavenArchetype
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: C:\Users\Jason\MavenArchetype\mywebapp
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 55.035s
+[INFO] Finished at: Fri Apr 27 17:45:35 CST 2012
+[INFO] Final Memory: 10M/25M
+[INFO] ------------------------------------------------------------------------
+================================================================================
+C:\USERS\JASON\MAVENARCHETYPE\MYWEBAPP
+│  pom.xml
+│
+└─src
+    └─main
+        ├─resources
+        └─webapp
+            │  index.jsp
+            │
+            └─WEB-INF
+                    web.xml
+
+3. 见./myj2eesimple
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-j2ee-simple
+================================================================================
+[INFO] Archetype [org.apache.maven.archetypes:maven-archetype-j2ee-simple:1.0] found in catalog remote
+Define value for property 'groupId': : com.mycompany
+Define value for property 'artifactId': : myj2eesimple
+Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'package':  com.mycompany: : com.mycompany.mypackage
+Confirm properties configuration:
+groupId: com.mycompany
+artifactId: myj2eesimple
+version: 1.0-SNAPSHOT
+package: com.mycompany.mypackage
+ Y: :
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-j2ee-simple:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.mycompany
+[INFO] Parameter: packageName, Value: com.mycompany.mypackage
+[INFO] Parameter: package, Value: com.mycompany.mypackage
+[INFO] Parameter: artifactId, Value: myj2eesimple
+[INFO] Parameter: basedir, Value: C:\Users\Jason\MavenArchetype
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: C:\Users\Jason\MavenArchetype\myj2eesimple
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 44.432s
+[INFO] Finished at: Fri Apr 27 17:47:28 CST 2012
+[INFO] Final Memory: 10M/25M
+[INFO] ------------------------------------------------------------------------
+================================================================================
+C:\USERS\JASON\MAVENARCHETYPE\MYJ2EESIMPLE
+│  pom.xml
+│
+├─ear
+│      pom.xml
+│
+├─ejbs
+│  │  pom.xml
+│  │
+│  └─src
+│      └─main
+│          └─resources
+│              └─META-INF
+│                      ejb-jar.xml
+│
+├─primary-source
+│      pom.xml
+│
+├─projects
+│  │  pom.xml
+│  │
+│  └─logging
+│          pom.xml
+│
+├─servlets
+│  │  pom.xml
+│  │
+│  └─servlet
+│      │  pom.xml
+│      │
+│      └─src
+│          └─main
+│              └─webapp
+│                  │  index.jsp
+│                  │
+│                  └─WEB-INF
+│                          web.xml
+│
+└─src
+    └─main
+        └─resources
+        
+4. 见./myappfusecore
+mvn archetype:generate -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-core 
+================================================================================
+[INFO] Archetype [org.appfuse.archetypes:appfuse-core:2.0.2] found in catalog remote
+Define value for property 'groupId': : com.mycompany
+Define value for property 'artifactId': : myappfusecore
+Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'package':  com.mycompany: : com.mycompany.mypackage
+Confirm properties configuration:
+groupId: com.mycompany
+artifactId: myappfusecore
+version: 1.0-SNAPSHOT
+package: com.mycompany.mypackage
+ Y: :
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: appfuse-core:2.0.2
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.mycompany
+[INFO] Parameter: packageName, Value: com.mycompany.mypackage
+[INFO] Parameter: package, Value: com.mycompany.mypackage
+[INFO] Parameter: artifactId, Value: myappfusecore
+[INFO] Parameter: basedir, Value: C:\Users\Jason\MavenArchetype
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: C:\Users\Jason\MavenArchetype\myappfusecore
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1:01.677s
+[INFO] Finished at: Fri Apr 27 17:50:04 CST 2012
+[INFO] Final Memory: 10M/26M
+[INFO] ------------------------------------------------------------------------
+================================================================================
+C:\USERS\JASON\MAVENARCHETYPE\MYAPPFUSECORE
+│  pom.xml
+│  README.txt
+│
+└─src
+    ├─main
+    │  ├─java
+    │  │  └─com
+    │  │      └─mycompany
+    │  │          └─mypackage
+    │  │                  Core.java
+    │  │
+    │  └─resources
+    │      │  applicationContext.xml
+    │      │  default-data.xml
+    │      │  ehcache.xml
+    │      │  hibernate.cfg.xml
+    │      │  sql-map-config.xml
+    │      │
+    │      └─META-INF
+    │              persistence.xml
+    │
+    ├─site
+    │      site.xml
+    │
+    └─test
+        ├─java
+        │  └─com
+        │      └─mycompany
+        │          └─mypackage
+        │                  CoreTest.java
+        │
+        └─resources
+                applicationContext-resources.xml
+                jdbc.properties
+                log4j.xml
+                mail.properties
+                sample-data.xml
+
+5. 见./mysitesimple
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-site-simple
+================================================================================
+[INFO] Archetype [org.apache.maven.archetypes:maven-archetype-site-simple:1.1] found in catalog remo
+te
+Define value for property 'groupId': : com.mycompany
+Define value for property 'artifactId': : mysitesimple
+Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'package':  com.mycompany: : com.mycompany.mypackage
+Confirm properties configuration:
+groupId: com.mycompany
+artifactId: mysitesimple
+version: 1.0-SNAPSHOT
+package: com.mycompany.mypackage
+ Y: : y
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-site-simple:1.1
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.mycompany
+[INFO] Parameter: packageName, Value: com.mycompany.mypackage
+[INFO] Parameter: package, Value: com.mycompany.mypackage
+[INFO] Parameter: artifactId, Value: mysitesimple
+[INFO] Parameter: basedir, Value: C:\Users\Jason\MavenArchetype
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: C:\Users\Jason\MavenArchetype\mysitesimple
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5:15.896s
+[INFO] Finished at: Mon Oct 29 10:58:33 CST 2012
+[INFO] Final Memory: 9M/23M
+[INFO] ------------------------------------------------------------------------
+================================================================================
+C:\USERS\JASON\MAVENARCHETYPE\MYSITESIMPLE
+│  pom.xml
+│
+└─src
+    └─site
+        │  site.xml
+        │
+        └─apt
+                index.apt
+                
+6. 见./mysite
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-site
+================================================================================
+[INFO] Archetype [org.apache.maven.archetypes:maven-archetype-site:1.1] found in catalog remote
+Define value for property 'groupId': : com.mycompany
+Define value for property 'artifactId': : mysite
+Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'package':  com.mycompany: : com.mycompany.mypackage
+Confirm properties configuration:
+groupId: com.mycompany
+artifactId: mysite
+version: 1.0-SNAPSHOT
+package: com.mycompany.mypackage
+ Y: :
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-site:1.1
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.mycompany
+[INFO] Parameter: packageName, Value: com.mycompany.mypackage
+[INFO] Parameter: package, Value: com.mycompany.mypackage
+[INFO] Parameter: artifactId, Value: mysite
+[INFO] Parameter: basedir, Value: C:\Users\Jason\MavenArchetype
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: C:\Users\Jason\MavenArchetype\mysite
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4:22.876s
+[INFO] Finished at: Mon Oct 29 11:08:18 CST 2012
+[INFO] Final Memory: 9M/23M
+[INFO] ------------------------------------------------------------------------
+================================================================================
+C:\USERS\JASON\MAVENARCHETYPE\MYSITE
+│  pom.xml
+│
+└─src
+    └─site
+        │  site.xml
+        │  site_fr.xml
+        │
+        ├─apt
+        │      format.apt
+        │      index.apt
+        │
+        ├─fml
+        │      faq.fml
+        │
+        ├─fr
+        │  ├─apt
+        │  │      format.apt
+        │  │      index.apt
+        │  │
+        │  ├─fml
+        │  │      faq.fml
+        │  │
+        │  └─xdoc
+        │          xdoc.xml
+        │
+        └─xdoc
+                xdoc.xml

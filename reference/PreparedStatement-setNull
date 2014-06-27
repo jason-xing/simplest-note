@@ -1,0 +1,16 @@
+关于PreparedStatement的setNull(1, Types.VARCHAR)方法
+(1) 当某列的值为null时，需要调用此方法，要注意第二个参数的实际含义和必要性；
+参见一篇文档《PreparedStatement的setNull》：
+PreparedStatement的setNull在使用时候需要注意，我以前以为任何类别都可以用这个方法来设置null值，
+今天发现我的想法是完全不对的，不同的类型要使用不同的不同NULL的类型，后来又自己研究了api文档，原来是我看的不够仔细
+方法原型：PreparedStatement.setNull(int index, int sqlType)，这里说的很清楚，第二个参数使用sqlType，
+应该用java.sql.Types中的类型来设置。
+比如，若设置某个类型为Double字段为空，则代码为:setNull(1, Types.DOUBLE);
+若设置某个类型为Date字段为空，则代码为:setNull(1, Types.DATE);
+(2) 对于setNull(1, Types.VARCHAR)方法，有的文档上说setString(1, null)效果是一样的，
+参见一篇文档《Sending JDBC NULL as an IN parameter》：
+The setNull method allows a programmer to send a JDBC NULL (a generic SQL NULL) value to the 
+database as an IN parameter. Note, however, that one must still specify the JDBC type of the parameter.
+A JDBC NULL will also be sent to the database when a Java null value is passed to a setXXX 
+method (if it takes Java objects as arguments). The method setObject, however, can take a null value 
+only if the JDBC type is specified. 

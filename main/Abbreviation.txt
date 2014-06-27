@@ -1,0 +1,292 @@
+一. 英文缩写问答
+关于 英文简写缩写 的规则规律 有些疑问向大家请教：一般省去A E I O U Y  比如CHINA缩写
+为CHN，但是
+问题一：如果单词的开头和结尾是“AEIOU”  那如何缩写才是正确的？
+问题二：如果是多个单词缩写，是不是不管元音辅音，都可以用首字母进行缩写？
+像EA、FBI、WOW等等这样？谢谢大家了
+问题一：如果单词的开头和结尾是“AEIOU”  那如何缩写才是正确的？无论如何都要带首字母，
+没说的。其他都不一定，主要要看什么场合、有什么格式需要，根据比如奥运会需要每个国家有
+个缩写，美国每个州有两个字母的代码，而 NBA 通常取城市名的前三个字母，例如 
+Chicago Bulls  芝加哥 公牛队 缩写是 CHI， Charlotte Bobcats 夏洛特 山猫队 是CHA。
+问题二：如果是多个单词缩写，是不是不管元音辅音，都可以用首字母进行缩写？
+像EA、FBI、WOW等等这样？是的，但是起名的人有一定的选择，像 of 、for、the这样的前置
+词等通常可以忽略，但是为了缩写读起来顺口想保留也可以，莫一个单词多取一个字母也无所谓。
+想 NAACP 是 National Association for the Advancement of Colored People. 还有，
+英语里多个词的缩写叫 acronym， 一个词的缩写叫 abbreviation。以便你自己进一步研究。
+
+二. 英文单词的缩写规则
+1. 单词缩写应省略在辅音之后，元音之前
+英文单词缩写一般以辅音结尾，而不以元音结尾。如American省略为Am，而不省略为Ame或Amer，
+Medicine或Medical缩写为Med，European缩写为Eur等。但Science例外，缩写为Sci，可能是
+因为元音I之后又是元音E的缘故。缩写刊名每个词首字母必须大写，而不可全部都用大写或小写。
+2. 压缩字母法
+仅个别单词采用压缩字母方式缩写，如Japanese缩写为Jpn而不是Jan，National应缩写为
+Natl而不是Nat等。经常有读者将Japanese写成Jan是参考文献著录中常见的错误。
+如Japanese Journal of Ophthalmology，应缩写为Jpn J Ophthalmol，
+National Cancer Institute Research Report缩写为Natl Cancer Inst Res Rep。
+而Nat是Nature和Natural的缩写，如Nature Medicine，Nature biotechnology分别缩写
+为Nat Med，Nat Biotechnol。另外CN是中国的国别代码，期刊缩写刊名中，China和Chinese
+不得缩写为CN，而应缩写为Chin。采用压缩写法是为了避免与其他常用缩写混淆。
+如Japanese不能缩写为Jan，可能是Jan是January的固定缩写形式，
+National缩写为Natl而不缩写为Nat，可能是Nat是Nature和Natural的缩写。
+3. 学科名称缩写
+刊名中学科名称缩写很常见，因而了解学科名缩写规则非常必要。凡以-ogy结尾的单词，
+一律将词尾-ogy去掉，如Cardiology缩写为Cariol，Biology缩写为
+Biol，以-ics结尾的学科名词，缩写时将-ics或连同其前面若干字母略去。如Physics，
+缩写为Phys，以-try结尾的词，缩写时将-try连同前面若干字母略去。如chemistry缩
+写为Chem，其中也包括其他形容词的缩写。
+4. 刊名中常用词和特殊单词的缩写
+期刊名中有些常用单词可以缩写为一个字母，如Journal缩写为J，Quarterly缩写为Q，
+Royal缩写为R，New缩写为N，South缩写为S等。
+5. 刊名首字母组合
+有些杂志名称缩写采用首字母组合，而且已被固定下来，一般都是国际上有较大影响的期刊，
+并得到国际上众多索引性检索工具的认同。如The Journal of American Medical 
+Association缩写为JAMA，British Medical Journal缩写为BMJ等。
+6. 国家名称的缩写
+刊名中国家名称的缩写分为两种情况。如国家名称为单个词汇，缩写时常略去词尾或词的后
+部分若干字母。如American缩写为Am，British缩写为Br，Chinese缩写为Chin等。而国家名
+称由多个词组组成时，常取每个词的首字母，如United States of America缩写为USA或US。
+7. 虚词一律省略
+有许多虚词，如the，of，for，and，on，from，to等，在缩写时均省去。如Journal of 
+chemistry缩写为J chem， Archives of Medical Research缩写为 Arch Med Res。
+
+
+三. 英文缩写词
+1. 简介 
+英文缩写词它是用一个单词或词组的简写形式来代表一个完整的形式，它不同于首字母缩写词。
+英文缩写是英语词语的简易形式，用英文单词中重要的字母来代表整个单词的意义，也被成为
+缩略词。但是缩写也会带来困扰，因为缩写可能在不同行业代表不同的意思。例如： 
+kg (kilogram), TV (television), cf (confer), cm (centimetre) 
+AD,A.DAnno Domini(=in the year of the Lord;since Christ was born 公元 
+A.M.,a.m.ante meridiem(before noon) 上午，午前 
+Apr. April 四月 
+Aug.August 八月 
+Ave.avenue 林荫道，大街 
+BABachelor of Arts 文科学士 
+BC ， B.C.before Christ 公元前 
+BS ， BScBachelor of Science 理科学士 
+C °， Centigrade 摄氏度 
+cccubic centimeter 立方厘米 
+CDcompact disk 光盘，激光唱片 
+cf.confer(=compare) 试比较；参看 
+cmcentimeter 厘米 
+Co.company 公司 
+c/ocare of 由…转交 
+cp.compare 比较 
+Dec.December 十二月 
+dept.,Dept.department 部，司，局，系 
+Dr.doctor 博士；医生 
+e.g.exempli gratia(=for example) 例如 
+esp.especially 尤其是 
+et al.et alia(=and others) 其他的 
+etc.et cetera(=and the rest) 等等 
+FFahrenheit 华氏的 
+Feb.February 二月 
+ftfoot,feet 英尺 
+g,gm.gram 克 
+GMTGreenwich Mean Time 格林威治时间 
+hr.hour 小时 
+IDidentification card 身份证 
+i.e.id est(=that is) 那就是，即 
+in.inch 英寸 
+Inc.incorporated 股份有限的 
+Jan.January 一月 
+Jr.junior 小（用于姓名后） 
+Jul.July 七月 
+Jun.June 六月 
+kg.kilogram 千克，公斤 
+km.kilometer 千米，公里 
+l. liter 升 
+lb.libra(=pound) 磅 
+Ltd.limited 有限的，股份有限 
+m.meter 米 
+MAMaster of Arts 文科硕士 
+Mar.March 三月 
+min.minute 分钟 
+ml.millimeter 毫升 
+Mon.Monday 星期一 
+Mr.Mister …先生 
+MrsMistress …夫人，…太太 
+Ms.Mrs or Miss …女士 
+MS,MScMaster of Science 理科硕士 
+Mtmount,mountain 峰，山 
+No.number 号码 
+Nov.November 十一月 
+Oct.October 十月 
+P page;parking 页，停车处 
+par,paraparagraph （文章的）段 
+Ph.D,PhDphilosophiae Doctor 博士 
+pl.plural 复数 
+PM,P.M.post meridiem(=afternoon) 下午 
+PRCPeople ' s Republic of China 中华人民共和国 
+Prof.professor 教授 
+PSpostscript 附言 
+Rd.,rdroad 路 
+Sat.Saturday 星期六 
+sec.second 秒 
+Sep., Sept.September 九月 
+sing.singular 单数 
+sqaquare 平方；广场 
+st.street 街道 
+sthsomething 某物，某事 
+Sun.Sunday 星期日 
+t.ton 吨 
+tel.telephone 电话 
+Thurs Thursday 星期四 
+Tues Tuesday 星期二 
+UK United Kingdom （大不列颠及北爱尔兰）联合王国，英国 
+UN United Nations 联合国 
+US U.S.United States(= America) 美利坚合众国，美国 
+usu usually 通常 
+v,vsversus …对… 
+VIPvery important person 重要人物，大人物 
+vol.Volume 卷，册 
+W,wwatt 瓦特 
+WCwater closet 厕所 
+Wed,Wednesday 星期三 
+
+ATM automatic teller machines 
+CPU central processing unit 
+PC personal computer 
+CD compact disc 
+IC Integrated Circuits 
+ASCII American standard code for Information Interchange 
+EBCDIC Extended Binary Code Decimal Interchange Code 
+RAM Random access memory 
+VC Video Camera 
+CRT Cathode Ray Tube 
+LCD Liquid Crystal Display 
+TFT tin-film transistor 
+ID identification 
+DBMS database management system 
+GIGO garbage in , garbage out 
+QBE query-by-example 
+CAS Computer-Aided surgery 
+GPS Global Positioning System 
+Rom Read-Only memory 
+SDRAM Synchronous dynamic RAM 
+GUI Graphical User Interface 
+LAN Local Area Network 
+WAN Wide Area Network 
+CMOS Complementary Metal-Oxide Semiconductor 
+CU Control Unit 
+ALU Arithmetic and Logical Unit 
+SVGA Super video graphics array 
+NLQ near letter quality 
+PDL page description language 
+PCL page control language 
+CBT Computer-based training 
+CAI Computer-aided instruction 
+WET Web-based training 
+DL Distance learning 
+DE Distance education 
+AAC Anytime Anywhere Learning 
+NCIC National Crime Information Center 
+
+2. 还有
+—————————————————————————————————————— 
+月份的缩写及全称 
+Jan.January 一月 
+Feb.February 二月 
+Mar.March 三月 
+Apr. April 四月 
+May五月 
+June 六月 
+July 七月 
+Aug.August 八月 
+Sept.September九月 
+Oct.October 十月 
+Nov.November 十一月 
+Dec.December 十二月
+—————————————————————————————————————— 
+星期的缩写及全称 
+Mon.Monday 星期一 
+Tue.Tuesday 星期二 
+Wed.WedsWednesday 星期三 
+Thu.Thursday 星期四 
+Fri.Friday星期五 
+Sat.Saturday 星期六 
+Sun.Sunday 星期日 
+—————————————————————————————————————— 
+重量单位的缩写 
+g 克 
+kg.kilogram 千克，公斤 
+t.ton 吨 
+lb.libra(=pound) 磅 
+—————————————————————————————————————— 
+长度单位的缩写 
+cm.centimeter 厘米 
+m.meter 米 
+km.kilometer 千米，公里 
+in.inch 英寸 
+ftfoot,feet 英尺 
+—————————————————————————————————————— 
+关于时间的缩写 
+sec.second 秒 
+hr.hour 小时 
+AD,A.DAnno Domini(=in the year of the Lord;since Christ was born 公元 
+A.M.,a.m.ante meridiem(before noon) 上午，午前 
+PM,P.M.post meridiem(=afternoon) 下午 
+—————————————————————————————————————— 
+常用缩写 
+完整单词 缩写 
+A 
+average ——> avg 
+B 
+back ——> bk 
+background ——> bg 
+break ——> brk 
+buffer ——> buf 
+C 
+color ——> cr(clr) 
+control ——> ctrl 
+D 
+data ——> dat 
+delete ——> del 
+document ——> doc 
+E 
+edit ——> edt 
+error ——> err 
+escape ——> esc 
+F 
+flag ——> flg 
+form ——> frm 
+G 
+grid ——> grd 
+I 
+increment ——> inc 
+information ——> info 
+initial ——> init 
+insert ——> ins 
+image ——> img 
+L 
+label ——> lab 
+length ——> len 
+list ——> lst 
+library ——> lib 
+M 
+manager ——> mngr(mgr) 
+message ——> msg 
+O 
+Oracle ——> Ora 
+P 
+panorama ——> pano 
+password ——> pwd 
+picture ——> pic 
+point ——> pt 
+position ——> pos 
+print ——> prn 
+program ——> prg 
+S 
+server ——> srv 
+source ——> src 
+statistic ——> stat 
+string ——> str 
+Sybase ——> Syb 
+T 
+temp ——> tmp 
+text ——> txt 
+U 
+user ——> usr 
+W 
+window ——> wnd(win) 

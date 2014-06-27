@@ -1,0 +1,59 @@
+Apache Derby已经成为JDK 6的一部分了，Sun将包含在JDK中的Apache Derby版本称为JavaDB。
+1.建立工作目录
+$ mkdir javadb
+$ cd javadb
+
+2.启动服务
+$ java -jar /usr/local/jdk1.6.0_17/db/lib/derbyrun.jar server start
+已使用基本服务器安全策略安装了安全管理程序。
+Apache Derby Network Server － 10.4.2.1 - (706043) 已启动并且已准备好 2010-10-25 12:51:53.957 GMT 时在端口 1527 上接受连接
+
+3.新开窗口，增加连接数据库的配置文件
+$ vim ij.properties
+ij.driver=org.apache.derby.jdbc.ClientDriver
+ij.protocol=jdbc:derby://localhost:1527/
+ij.database=corejava;create=true
+
+4.使用客户端工具ij连接数据库
+$ java -jar /usr/local/jdk1.6.0_17/db/lib/derbyrun.jar ij -p ij.properties
+ij 版本 10.4
+CONNECTION0* -  jdbc:derby://localhost:1527/corejava;create=true
+* = 当前连接
+ij>
+进入了ij命令行，在ij命令行依次执行下面命令来进行测试：
+ij> create table login (   
+    username varchar(25) not null, 
+    password varchar(25) not null,
+    constraint pk_login primary key (username)
+);
+ij> insert into login(username, password) values('admin', '123456');
+ij> select * from login;
+ij> drop table login;
+ij> exit;
+
+5.关闭服务
+$ java -jar /usr/local/jdk1.6.0_17/db/lib/derbyrun.jar server shutdown
+Apache Derby 网络服务器 － 10.4.2.1 - (706043) 在 2010-10-25 13:24:33.631 GMT 时关闭
+
+6.上面执行完成后，在javadb工作目录下出现如下目录和文件：
+corejava  derby.log  ij.properties
+
+./corejava:
+dbex.lck  db.lck  log  seg0  service.properties  tmp
+
+./corejava/log:
+log1.dat  log.ctrl  logmirror.ctrl
+
+./corejava/seg0:
+c101.dat  c180.dat  c20.dat   c290.dat  c31.dat   c3a1.dat  c71.dat  d400.dat
+c10.dat   c191.dat  c211.dat  c2a1.dat  c321.dat  c3b1.dat  c81.dat  d411.dat
+c111.dat  c1a1.dat  c221.dat  c2b1.dat  c331.dat  c3c0.dat  c90.dat
+c121.dat  c1b1.dat  c230.dat  c2c1.dat  c340.dat  c3d1.dat  ca1.dat
+c130.dat  c1c0.dat  c241.dat  c2d0.dat  c351.dat  c3e1.dat  cb1.dat
+c141.dat  c1d1.dat  c251.dat  c2e1.dat  c361.dat  c3f1.dat  cc0.dat
+c150.dat  c1e0.dat  c260.dat  c2f0.dat  c371.dat  c41.dat   cd1.dat
+c161.dat  c1f1.dat  c271.dat  c300.dat  c380.dat  c51.dat   ce1.dat
+c171.dat  c200.dat  c281.dat  c311.dat  c391.dat  c60.dat   cf0.dat
+
+./corejava/tmp:
+ayong@ayong-laptop:~/javadb$ 

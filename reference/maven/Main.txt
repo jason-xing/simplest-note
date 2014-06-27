@@ -1,0 +1,11 @@
+1. 关于archetype参见《Archetype.txt》及若干my...文件夹。
+2. artifactId和groupId
+   artifactId指项目的id或名字。
+   groupId指artifactId所属组，除了可以是com.mycompany之类外，也可能是个组，组内
+   可能还有组。例如：
+   <dependency>
+       <groupId>org.apache.commons</groupId>
+       <artifactId>commons-lang3</artifactId>
+       <version>3.1</version>
+   </dependency>
+3. maven中使用一个parent pom，则它下面的子模块应该是同一个版本号。
