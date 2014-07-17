@@ -116,8 +116,9 @@
    从简单角度讲：不使用。仅专注于该做的事情，即展示simplest-dbutils和simplest-web的如何使用为目的。
    从项目的使用性角度讲，应该使用core，最低限度的使用ui，可用到：datepicker控件，ajax请求，类似于邮件
    格式的校验等。
-   目前考虑：使用。datepicker控件。
-
+   目前考虑：使用。datepicker控件。所以，暂时使用jQuery UI的Download builder只在Widgets选择Datepicker
+   和Dialog，Download builder会根据依赖关系自动选择上UI Core和Interactions的其它的。然后UI的Theme选
+   择Smothness，跟目前的页面风格比较搭，比较简单。
       
 三.使用的工具
 1. 使用dbcp，需要导入commons-dbcp-1.4.jar，它又依赖于commons-pool-1.5.5.jar，它
