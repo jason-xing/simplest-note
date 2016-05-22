@@ -18,4 +18,5 @@
 13. servlet中的抛出的异常，如果不做处理，不能够被web.xml中的配置的error-page得到。配置了error-page后，一旦servlet抛出异常发生，容器应该是将request forward到这个error-page，这仅仅是个forward的过程。因此可以将异常放到request的attribute中，然后error-page中就可以从request的attribute中得到这个exception。但这样就需要每个抛出异常的地方都这样做，所以不是个理想的解决方法。
 14. 参照Apache Shiro项目，定义一个root exception：ShiroException，该项目的其它exception均继承自exception，这样便于使用该项目的项目根据抛出的exception执行相应操作。
 15. 若要定义非RuntimeException，则只要继承Exception即可。有时需要定义非RuntimeException：当需要向调用方报告有这种类型的异常发生，以便调用方可根据抛出的异常类型进行相应的处理，尤其是在产品（相对于项目）代码中。
-16. 在service层，对于用户名为空或密码为空的异常，决定：抛出空指针异常，而非每个自己定义一个异常，因为它跟Java中的空指针异常类似，是明显的错误，而不像密码不正确这种不是错误，并且这种空异常在其他情形下也比较普遍，每个都自己定义一个新异常，没必要。这种做运行期异常处理，在Javadoc中提示调用者即可，不强制其处理（非运行期异常）。  
+16. 在service层，对于用户名为空或密码为空的异常，决定：抛出空指针异常，而非每个自己定义一个异常，因为它跟Java中的空指针异常类似，是明显的错误，而不像密码不正确这种不是错误，并且这种空异常在其他情形下也比较普遍，每个都自己定义一个新异常，没必要。这种做运行期异常处理，在Javadoc中提示调用者即可，不强制其处理（非运行期异常）。
+17. 有篇介绍Exception的文章讲的特别全面：http://blog.csdn.net/hguisu/article/details/6155636。
