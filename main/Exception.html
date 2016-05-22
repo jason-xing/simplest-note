@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exception</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>异常</h1>
+<ol>
+<li>通过将非运行期异常转换为运行期异常（RuntimeException），可以将接口上的显式的异常声明去掉，例如，在service层的代码中调用Session类方法执行sql，将方法抛出的SQLException转为了DbException。</li>
+<li>《Java核心技术-11.1 处理异常》中：异常处理的任务就是将控制权从错误产生的地方转移给能够处理这种情况的错误处理器。<br />
+<strong>本人注释：</strong>向用户报告错误也是一种错误处理器。</li>
+<li>《Java核心技术-11.2 捕获异常》中：通常，应该捕获那些知道如何处理的异常，而将那些不知道怎样处理的异常传递出去。<br />
+<strong>本人注释：</strong>有时候，有些异常即使抛出去也没有地方有办法去处理它，则还不如就地解决掉它，就像从网上摘录的话：“异常最好能在距发生异常的最近的地方被处理，如果继续抛出到上层，也不能被处理掉，为什么不立即处理掉呢？”，将一个checked异常转为一个runtime异常，也是一种处理方式。例如：在service层的代码中调用Session类方法执行sql，将方法抛出的SQLException转为了DbException。</li>
+<li>有时候，不能在最近的地方将非运行期异常处理掉或转换为运行期异常：因为方法的间接调用者（若干层调用）能需要通过捕获该非运行期异常来确定某些事情，所以要一直抛到那里进行处理或转换为运行期异常。正因如此，所以Session的执行sql的方法中没有将SQLException进行转为DbException，而是又直接传出去，由service层的代码来转为DbException。</li>
+<li>将意外的情况作为异常来处理，是比较合理的办法，例如因数据库配置错误或数据库网络连接中断或sql书写错误导致的意外情况都应该作为异常抛到最外层的表示层去处理（显示给用户：数据库异常），而不应该在业务逻辑层通过返回boolean类型来显示更新成功和失败，这是不合理的，而且这样也会把异常的详细信息给丢掉。</li>
+<li>使用try/catch处理异常，对于try中某类的方法抛出的非运行期异常，是必须要在catch中捕获的，但这些异常并不是该类的方法要抛出的所有异常，因为还有运行期异常，比如空指针异常（NullPointerException）就不会被捕获并处理（话说回来，其实NullPointerException一般可通过object is null来通过程序判断解决），这个要注意。如果要处理所有异常的，则需要在catch的括号中使用比较上层的异常类型，比如Exception，甚至Throwable。</li>
+<li>Java的错误异常体系中Throwable类为所有错误异常类的基类，它的子类有Error类和Exception类，而Exception类的子类又有RuntimeException类和非RuntimeException类。所以，如果有个try-catch块的catch()中是Exception类，那么若try块中抛出Error或其子类的对象，则catch不会捕获到它，如果要捕获所有的错误异常，则可以在catch()中用Throwable类，这是要注意的。</li>
+<li>有本书《Effective Java》挺不错的，它的第8章就是讲异常的，给了我一些启发，最近（2012年1月）我又读了一遍这章。</li>
+<li>有篇网上的文章写的也挺好，见“studynote/java/resource/java-exception.html”。</li>
+<li>虽然不可能处理所有的异常（checked是必须要显式的，runtime是不必显式的），但考虑到某些场合，尽量多的处理异常，给调用者更多的异常也是不错的做法，如我写的Dbcp.java就对null做了一次抛出异常的操作。</li>
+<li>service中的方法在处理业务时，有不符合正常逻辑的情况，应通过“抛出异常的方式”来处理，而不是采用“返回一个错误代码字符串”的方式，尽管后者处理起来比较容易。<br />
+在产品级别的逻辑层类方法中，应该定义各种不同的异常，例如在专业的认证方法中，可以抛出用户名不存在异常，密码不正确异常，用户登录状态已无效异常等异常，例如Apache Shiro项目中Subject.login(Token)方法的处理。<br />
+但在项目级别的逻辑类方法中，除了采用上面的方法定义各种不同的异常以外，还可以从简单、方便的角度考虑，直接抛出一个runtime异常，通过异常的字符串来让直接或间接调用者得到异常信息。</li>
+<li>关于异常，无论是runtime的还是非runtime的，只要程序抛出此异常，则程序的调用方就会停止程序的执行。</li>
+<li>servlet中的抛出的异常，如果不做处理，不能够被web.xml中的配置的error-page得到。配置了error-page后，一旦servlet抛出异常发生，容器应该是将request forward到这个error-page，这仅仅是个forward的过程。因此可以将异常放到request的attribute中，然后error-page中就可以从request的attribute中得到这个exception。但这样就需要每个抛出异常的地方都这样做，所以不是个理想的解决方法。</li>
+<li>参照Apache Shiro项目，定义一个root exception：ShiroException，该项目的其它exception均继承自exception，这样便于使用该项目的项目根据抛出的exception执行相应操作。</li>
+<li>若要定义非RuntimeException，则只要继承Exception即可。有时需要定义非RuntimeException：当需要向调用方报告有这种类型的异常发生，以便调用方可根据抛出的异常类型进行相应的处理，尤其是在产品（相对于项目）代码中。</li>
+<li>在service层，对于用户名为空或密码为空的异常，决定：抛出空指针异常，而非每个自己定义一个异常，因为它跟Java中的空指针异常类似，是明显的错误，而不像密码不正确这种不是错误，并且这种空异常在其他情形下也比较普遍，每个都自己定义一个新异常，没必要。这种做运行期异常处理，在Javadoc中提示调用者即可，不强制其处理（非运行期异常）。  </li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

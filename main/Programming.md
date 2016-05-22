@@ -1,3 +1,4 @@
+# 编程大全
 ## 编程规范
 1. 遵循Java编码规范。
 2. 一个编程约定：返回类型为List的方法，若没有数据，则返回一个size为0的空list，而不是返回null。其实，在Hibernate中，Session.find(sql)返回的List就是这样的。
@@ -77,7 +78,7 @@ org.apache.ibatis.session.defaults.DefaultSqlSession相当于我的Session类。
 ## 参考项目
 1. 参考项目iBATIS_JPetStore-4.0.5中我的笔记中关于值得学习的点。
 
-##.知识点
+## 知识点
 1. 参考JDK API，Statement的executeQuery()返回的ResultSet对象永远不可能为null。
 2. 对于PreparedStatement的setXXX()，若该列的值为null，则可以写为setNull(1, JdbcType)或setXXX(1, null)或setObject(1, null)，据我了解，有的驱动程序这三种方法都支持，有的则部分支持，这个要注意首次使用数据库驱动或更换数据库驱动时要进行认真的测试。
 3. 异常，见《Exception》。
@@ -93,5 +94,5 @@ org.apache.ibatis.session.defaults.DefaultSqlSession相当于我的Session类。
 4>. 最后考虑，高度和宽度都采用绝对值，这样控制最简单，现在大部分显示器是宽屏，16:9或者16:10的，而这里再取一个1280 * 800(16:10)的主流中最小分辨率作为标准来定义宽度和高度。  
 8. 网站整体色彩搭配设计：主题部分大部分为白色，外框和主题部分的组件颜色可谓活泼的颜色如橙色、嫩绿等。
       
-##. 项目管理
+## 项目管理
 1. 有一个技巧不错：跟大家商量，然后约定在在某一天，将所有的程序提交，进行联调。这种具体、明确、硬性的目标对激励大家按时完成任务是很有用的。每个人可能会觉得，如果自己没有按时完成，拖大家后腿的话，会很丢人，所以也会积极配合。
