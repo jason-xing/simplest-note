@@ -293,8 +293,6 @@ img {
 <body>
 <h1>Apache、MySQL、PHP在Windows上的安装</h1>
 <h2>Apache的安装</h2>
-<h3>参考文档</h3>
-<p>http://jingyan.baidu.com/article/29697b912f6539ab20de3cf8.html  </p>
 <h3>下载</h3>
 <ol>
 <li>由于现在Apache本身不再提供已编译的安装包，只提供源码，如果你自己无法编译，可以选择官方推荐的第三方提供编译的网站，这里使用ApacheHaus第三方提供安装包。</li>
@@ -311,7 +309,7 @@ img {
 <li>Apache24拷贝到安装目录下，如D盘，则为D:\Apache24。</li>
 </ol>
 <h3>在PATH中添加bin目录</h3>
-<h3>安装为系统的一个服务</h3>
+<h3>可将Apache安装为系统的一个服务</h3>
 <pre><code>httpd -k install
 </code></pre>
 
@@ -326,6 +324,8 @@ img {
 Apache默认监听80端口，如果该端口其它服务占用，Apache将无法正常启动。<br />
 如需要，可修改默认端口，编辑配置文件conf\httpd.conf，Listen 80 -&gt; Listen 8088。 然后重启服务。</li>
 </ol>
+<h3>参考文档</h3>
+<p>http://jingyan.baidu.com/article/29697b912f6539ab20de3cf8.html  </p>
 
 </body>
 </html>
