@@ -330,11 +330,11 @@ img {
 <h2>四. 修改配置文件</h2>
 <h3>Apache：D:\Apache24\conf\httpd.conf</h3>
 <ol>
-<li>Define SRVROOT &quot;/Apache24&quot; -&gt; Define SRVROOT &quot;D:/Apache24&quot;</li>
-<li>Listen 80 -&gt; Listen 8088
+<li>Define SRVROOT &quot;/Apache24&quot; =&gt; Define SRVROOT &quot;D:/Apache24&quot;</li>
+<li>Listen 80 =&gt; Listen 8088
 Apache默认监听80端口，如果该端口其它服务占用，Apache将无法正常启动。</li>
-<li>ServerName localhost:80 -&gt; ServerName localhost:8088</li>
-<li>DirectoryIndex index.html -&gt; DirectoryIndex index.html index.php</li>
+<li>ServerName localhost:80 =&gt; ServerName localhost:8088</li>
+<li>DirectoryIndex index.html =&gt; DirectoryIndex index.html index.php</li>
 <li>添加：<br />
 LoadModule php5_module &quot;D:/php-5.6.22/php5apache2_4.dll&quot;<br />
 AddType application/x-httpd-php .php<br />
@@ -343,14 +343,14 @@ PHPIniDir &quot;D:/php-5.6.22&quot;  </li>
 </ol>
 <h3>MySQL：D:\mysql-5.6.31\my.ini(D:\mysql-5.6.31\my-default.ini的副本)</h3>
 <ol>
-<li># basedir = -&gt; basedir = D:\mysql-5.6.31</li>
-<li># datadir = -&gt; datadir = D:\mysql-5.6.31\data</li>
+<li># basedir = =&gt; basedir = D:\mysql-5.6.31</li>
+<li># datadir = =&gt; datadir = D:\mysql-5.6.31\data</li>
 </ol>
 <h3>PHP：D:\php-5.6.22\php.ini(D:\php-5.6.22\php.ini-development的副本)</h3>
 <ol>
-<li>doc_root = -&gt; doc_root = &quot;D:\Apache24\htdocs&quot;</li>
-<li>; extension_dir = &quot;ext&quot; -&gt; extension_dir = &quot;D:\php-5.6.22\ext&quot;</li>
-<li>;extension=php_mysqli.dll -&gt; extension=php_mysqli.dll</li>
+<li>doc_root = =&gt; doc_root = &quot;D:\Apache24\htdocs&quot;</li>
+<li>; extension_dir = &quot;ext&quot; =&gt; extension_dir = &quot;D:\php-5.6.22\ext&quot;</li>
+<li>;extension=php_mysqli.dll =&gt; extension=php_mysqli.dll</li>
 </ol>
 <h2>五. 安装服务</h2>
 <h3>将Apache安装为系统的一个服务</h3>
@@ -382,7 +382,7 @@ mysql -u root
 </ol>
 </blockquote>
 <h2>六. 验证</h2>
-<p>D:\Apache24\htdocs\index.html -&gt; D:\Apache24\htdocs\index.php</p>
+<p>新增PHP文件：D:\Apache24\htdocs\index.php</p>
 <pre><code>&lt;?php phpinfo(); ?&gt;
 </code></pre>
 

@@ -24,23 +24,23 @@
 2. D:\mysql-5.6.31\bin
 ## 四. 修改配置文件
 ### Apache：D:\Apache24\conf\httpd.conf  
-1. Define SRVROOT "/Apache24" -> Define SRVROOT "D:/Apache24"
-2. Listen 80 -> Listen 8088
+1. Define SRVROOT "/Apache24" => Define SRVROOT "D:/Apache24"
+2. Listen 80 => Listen 8088
 Apache默认监听80端口，如果该端口其它服务占用，Apache将无法正常启动。
-3. ServerName localhost:80 -> ServerName localhost:8088
-4. DirectoryIndex index.html -> DirectoryIndex index.html index.php
+3. ServerName localhost:80 => ServerName localhost:8088
+4. DirectoryIndex index.html => DirectoryIndex index.html index.php
 5. 添加：  
 LoadModule php5_module "D:/php-5.6.22/php5apache2_4.dll"  
 AddType application/x-httpd-php .php  
 AddType application/x-httpd-php .html  
 PHPIniDir "D:/php-5.6.22"  
 ### MySQL：D:\mysql-5.6.31\my.ini(D:\mysql-5.6.31\my-default.ini的副本)
-1. # basedir = -> basedir = D:\mysql-5.6.31
-2. # datadir = -> datadir = D:\mysql-5.6.31\data
+1. # basedir = => basedir = D:\mysql-5.6.31
+2. # datadir = => datadir = D:\mysql-5.6.31\data
 ### PHP：D:\php-5.6.22\php.ini(D:\php-5.6.22\php.ini-development的副本)
-1. doc_root = -> doc_root = "D:\Apache24\htdocs"
-2. ; extension_dir = "ext" -> extension_dir = "D:\php-5.6.22\ext"
-3. ;extension=php_mysqli.dll -> extension=php_mysqli.dll
+1. doc_root = => doc_root = "D:\Apache24\htdocs"
+2. ; extension_dir = "ext" => extension_dir = "D:\php-5.6.22\ext"
+3. ;extension=php_mysqli.dll => extension=php_mysqli.dll
 ## 五. 安装服务
 ### 将Apache安装为系统的一个服务
     httpd -k install
@@ -57,8 +57,9 @@ PHPIniDir "D:/php-5.6.22"
 > 3. 安装完成后，root登录无需密码，需要设置密码：mysqladmin -u root password 123456
 > 4. 修改密码：mysqladmin -u root -p password abcdef
 ## 六. 验证
-D:\Apache24\htdocs\index.html -> D:\Apache24\htdocs\index.php
+新增PHP文件：D:\Apache24\htdocs\index.php
 
     <?php phpinfo(); ?>
+
 ## 七. 参考文档
 http://jingyan.baidu.com/article/7908e85c9c5227af481ad2f7.html
