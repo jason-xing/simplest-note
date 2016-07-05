@@ -54,10 +54,10 @@ PHPIniDir "D:/php-5.6.22"
     mysql -u root
 > 1. 需要以管理员身份启动命令行窗口。  
 > 2. 在安装mysql服务时，一定要切换到mysql安装目录的bin目录下，不管你是否配置环境变量。否则会报错：发生系统错误 2。系统找不到指定的文件。 
-> 3. 安装完成后，root登录无需密码，需要设置密码：mysqladmin -u root password
-> 4. 有密码后，修改密码：mysqladmin -u root -p password
-> 5. mysqladmin程序仅用户数据库的管理，执行数据库的管理命令，不是连接数据库，连接数据库使用mysql程序。
-> 6. 连接数据库：mysql -u root -p 或者 mysql -u root --password=mypassword，不推荐在命令行中显示的输密码。
+> 3. 安装完成后，root登录无需密码，需设密码：mysqladmin -u root password；以后修改密码：mysqladmin -u root -p password。另外，mysqladmin程序仅用于数据库管理，可执行管理命令，连接数据库可使用mysql命令。
+### 使用MySQL
+1. 《21分钟MySQL入门教程》：http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html
+2. 连接数据库：mysql -u root -p 或者 mysql -u root --password=mypassword(不推荐在命令行中显示的输密码)。
 ## 六. 验证
 新增PHP文件：D:\Apache24\htdocs\index.php
 
