@@ -22,7 +22,9 @@ Download failed. There are no HTTP transports available which can complete the r
 ![Footer](http://i.imgur.com/OWKDrRx.jpg)  
 其实，每个主题的这些设置是不一样的。但大体的概念都有Basic(含SiteIdentiy)，FrontPage, Header, Footer, Menus, Widgets等，含义也一样。
 7. 点击网站标题/DashBoard可以看到使用wordpress管理界面，一般用它即可，也通用；点击Customize可以看到所选择的Theme的管理界面，对于该Theme的特殊组件和特性，用它更方便些。  
-8. Menu Settings中有一个复选框Navigation Menu用来显示导航菜单。
+8. 关于菜单  
+<1>. 基本操作：新建一个菜单，如Menu1，然后在"菜单结构"中定义该菜单的菜单项(可以是页面、文章、自定义链接、分类目录)，添加、删除、排序菜单项，可以在"菜单设置"中设置在主题中的显示位置为Naviagtion Menu。  
+<2>. 基本思路为：新建菜单，定义菜单项，设置菜单在主题中的显示位置等。
 9. Menu Structure可以控制菜单的顺序以及分层等。
 10. Theme由若干的Template文件(.php文件)组成，共同的结果，形成一个Theme。
 11. 几个官方文档要看：  
@@ -35,7 +37,7 @@ a. The stylesheet called style.css, which controls the presentation (visual desi
 b. WordPress template files which control the way the site pages generate the information from your WordPress database to be displayed on the site.  
 c. The optional functions file (functions.php) as part of the WordPress Theme files.  
 C. Templates are PHP source files used to generate the pages requested by visitors, and are output as HTML. Template files are made up of HTML, PHP, and WordPress Template Tags.  
-D. Template Files List、Basic Templates、部分很重要。  
+D. Template Files List、Basic Templates部分很重要。  
 <4>. Template Hierarchy：https://developer.wordpress.org/themes/basics/template-hierarchy/
 12. 页面和文章一样也是在数据库中存放的。
 13. 在Page List中，子页面在父页面的下面层级，并且，Permalink(Slug)会在父页面的Permalink(Slug)的下面加上自己的标识。
