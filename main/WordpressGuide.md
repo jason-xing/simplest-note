@@ -29,6 +29,13 @@ Download failed. There are no HTTP transports available which can complete the r
 10. Theme由若干的Template文件(.php文件)组成，共同的结果，形成一个Theme。
 11. 几个官方文档要看：  
 <1>. Pages：https://codex.wordpress.org/Pages。  
+A. Page和Post的区别。  
+B. 像Post可以放到Category中实现分类、分层一样，Page也可以实现父子的层次结构。  
+C. 可以更改Page的URL。  
+D. 使用模板标签wp\_list\_pages()可以将一个Page列表放到页面的sidebar或footer上。  
+E. Almost everything in WordPress is generated dynamically, including Pages. Everything published in WordPress (Posts, Pages, Comments, Blogrolls, Categories, etc...) is stored in the MySQL database. When the site is accessed, the database information is used by your WordPress Templates from your current Theme to generate the web page being requested.  
+F. 可以重新定义一个Page Template，覆盖掉原来的page.php模板文件。  
+G. Wordpress是动态网页展示的，如果修改为静态网页，则主题和模板就没有用武之地了，不过，现在的技术，如pseudo-static，可先对动态网页生成静态网页，用户可直接看静态网页即可。  
 <2>. Creating a Static Front Page：https://codex.wordpress.org/Creating_a_Static_Front_Page。  
 <3>. Theme Development：https://codex.wordpress.org/Theme_Development。以下摘要较好：  
 A. WordPress Themes are files that work together to create the design and functionality of a WordPress site. Each Theme may be different, offering many choices for site owners to instantly change their website look.  
