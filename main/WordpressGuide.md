@@ -40,6 +40,7 @@ G. Wordpress是动态网页展示的，如果修改为静态网页，则主题�
 A. WordPress Static Front Page Process小节重要。  
 B. Creating a Static Front Page小节很重要。  
 C. Theme Development for Custom Front Page Templates小节很重要。  
+D. Blog Posts Index Page Template: home.php；Site Front Page Template: front-page.php或A Custom Page Template。  
 <3>. Theme Development：https://codex.wordpress.org/Theme_Development。以下摘要较好：  
 A. WordPress Themes are files that work together to create the design and functionality of a WordPress site. Each Theme may be different, offering many choices for site owners to instantly change their website look.  
 B. WordPress Themes typically consist of three main types of files, in addition to images and JavaScript files.  
