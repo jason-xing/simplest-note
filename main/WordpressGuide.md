@@ -1,4 +1,4 @@
-1# Wordpress指南
+# Wordpress指南
 ## 一. Wordpress使用
 ### 知识点
 1. Page编辑中，Permalink中不能有中文，否则前台出现：  
@@ -27,33 +27,38 @@ Download failed. There are no HTTP transports available which can complete the r
 <2>. 基本思路为：新建菜单，定义菜单项，设置菜单在主题中的显示位置等。
 9. Menu Structure可以控制菜单的顺序以及分层等。
 10. Theme由若干的Template文件(.php文件)组成，共同的结果，形成一个Theme。
-11. 几个官方文档要看：  
-<1>. Pages：https://codex.wordpress.org/Pages。  
-A. Page和Post的区别。  
-B. 像Post可以放到Category中实现分类、分层一样，Page也可以实现父子的层次结构，设定后，页面的导航标题中会显示层级。  
-C. 可以更改Page的URL。  
-D. 使用模板标签wp\_list\_pages()可以将一个Page列表放到页面的sidebar或footer上。  
-E. Almost everything in WordPress is generated dynamically, including Pages. Everything published in WordPress (Posts, Pages, Comments, Blogrolls, Categories, etc...) is stored in the MySQL database. When the site is accessed, the database information is used by your WordPress Templates from your current Theme to generate the web page being requested.  
-F. 可以重新定义一个Page Template，覆盖掉原来的page.php模板文件。  
-G. Wordpress是动态网页展示的，如果修改为静态网页，则主题和模板就没有用武之地了，不过，现在的技术，如pseudo-static，可先对动态网页生成静态网页，用户可直接看静态网页即可。  
-<2>. Creating a Static Front Page：https://codex.wordpress.org/Creating\_a\_Static\_Front\_Page。  
-A. WordPress Static Front Page Process小节重要。  
-B. Creating a Static Front Page小节很重要。  
-C. Theme Development for Custom Front Page Templates小节很重要。  
-D. Blog Posts Index Page Template: home.php；Site Front Page Template: front-page.php或A Custom Page Template。  
-<3>. Theme Development：https://codex.wordpress.org/Theme_Development。以下摘要较好：  
-A. WordPress Themes are files that work together to create the design and functionality of a WordPress site. Each Theme may be different, offering many choices for site owners to instantly change their website look.  
-B. WordPress Themes typically consist of three main types of files, in addition to images and JavaScript files.  
-a. The stylesheet called style.css, which controls the presentation (visual design and layout) of the website pages.  
-b. WordPress template files which control the way the site pages generate the information from your WordPress database to be displayed on the site.  
-c. The optional functions file (functions.php) as part of the WordPress Theme files.  
-C. Templates are PHP source files used to generate the pages requested by visitors, and are output as HTML. Template files are made up of HTML, PHP, and WordPress Template Tags.  
-D. Template Files List、Basic Templates部分很重要。  
-<4>. Template Hierarchy：https://developer.wordpress.org/themes/basics/template-hierarchy/
-12. 页面和文章一样也是在数据库中存放的。
-13. 在Page List中，子页面在父页面的下面层级，并且，Permalink(Slug)会在父页面的Permalink(Slug)的下面加上自己的标识。
-14. page.php是Page的模板文件。
-15. 修改为简体中文，在设置-常规-站点语言设置为中文简体。
-16. 页面布局几个关键的模板文件：header.php, footer.php, sidebar.php, content.php等。
+11. 页面和文章一样也是在数据库中存放的。
+12. 在Page List中，子页面在父页面的下面层级，并且，Permalink(Slug)会在父页面的Permalink(Slug)的下面加上自己的标识。
+13. page.php是Page的模板文件。
+14. 修改为简体中文，在设置-常规-站点语言设置为中文简体。
+15. 页面布局几个关键的模板文件：header.php, footer.php, sidebar.php, content.php等。
+
+## 二. 几个官方文档要看：  
+1. **Pages**  
+https://codex.wordpress.org/Pages  
+<1>. Page和Post的区别。  
+<2>. 像Post可以放到Category中实现分类一样，Page也可以实现父子的层次结构，设定后，页面的导航标题中会显示层级。  
+<3>. 可以更改Page的URL。  
+<4>. 使用模板标签wp\_list\_pages()可以将一个Page列表放到页面的sidebar或footer上。  
+<5>. Almost everything in WordPress is generated dynamically, including Pages. Everything published in WordPress (Posts, Pages, Comments, Blogrolls, Categories, etc...) is stored in the MySQL database. When the site is accessed, the database information is used by your WordPress Templates from your current Theme to generate the web page being requested.  
+<6>. 可以重新定义一个Page Template，覆盖掉原来的page.php模板文件。  
+<7>. Wordpress是动态网页展示的，如果修改为静态网页，则主题和模板就没有用武之地了，不过，现在的技术，如pseudo-static，可先对动态网页生成静态网页，用户可直接看静态网页即可。  
+2. **Creating a Static Front Page**  
+https://codex.wordpress.org/Creating\_a\_Static\_Front\_Page  
+<1>. WordPress Static Front Page Process小节。  
+<2>. Creating a Static Front Page小节。  
+<3>. Theme Development for Custom Front Page Templates小节。  
+<4>. Blog Posts Index Page Template: home.php; Site Front Page Template: front-page.php或A Custom Page Template。  
+3. **Theme Development**  
+https://codex.wordpress.org/Theme_Development。以下摘要较好：  
+<1>. WordPress Themes are files that work together to create the design and functionality of a WordPress site. Each Theme may be different, offering many choices for site owners to instantly change their website look.  
+<2>. WordPress Themes typically consist of three main types of files, in addition to images and JavaScript files.  
+A. The stylesheet called style.css, which controls the presentation (visual design and layout) of the website pages.  
+B. WordPress template files which control the way the site pages generate the information from your WordPress database to be displayed on the site.  
+C. The optional functions file (functions.php) as part of the WordPress Theme files.  
+<3>. Templates are PHP source files used to generate the pages requested by visitors, and are output as HTML. Template files are made up of HTML, PHP, and WordPress Template Tags.  
+<4>. Template Files List、Basic Templates部分很重要。  
+4. **Template Hierarchy**  
+https://developer.wordpress.org/themes/basics/template-hierarchy/
 
 
