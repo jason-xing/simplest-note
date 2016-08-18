@@ -1,6 +1,5 @@
 # Wordpress指南
 ## 一. Wordpress使用
-### 知识点
 1. Page编辑中，Permalink中不能有中文，否则前台出现：  
 It looks like nothing was found at this location. Maybe try a search?
 或报404错误。
@@ -32,6 +31,7 @@ Download failed. There are no HTTP transports available which can complete the r
 13. page.php是Page的模板文件。
 14. 修改为简体中文，在设置-常规-站点语言设置为中文简体。
 15. 页面布局几个关键的模板文件：header.php, footer.php, sidebar.php, content.php等。
+16. 主题根目录下的文件和wp-admin目录、wp-includes目录是主题的程序文件，一般不需要修改；wp-content是可以修改和配置的目录。
 
 ## 二. 几个官方文档要看：  
 1. **Pages**  
