@@ -61,4 +61,7 @@ C. The optional functions file (functions.php) as part of the WordPress Theme fi
 4. **Template Hierarchy**  
 https://developer.wordpress.org/themes/basics/template-hierarchy/
 
-
+## 三. Wordpress主题开发
+1. single.php是文章(博客)详情页，archive.php、date.php、author.php、tag.php等都是文章(博客)列表页。
+2. header.php、footer.php、sidebar.php、comment.php、searchform.php等属于局部模板文件，一般是被作为引用对象的一部分被引用的，如被page.php、single.php、tag.php、archive.php引用等。
+3. WordPress用户请求的过程：用户访问、判断请求的页面类型、查找模板、呈现页面。
