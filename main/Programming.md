@@ -111,6 +111,10 @@ org.apache.ibatis.session.defaults.DefaultSqlSession相当于我的Session类。
 15. 若要定义非RuntimeException，则只要继承Exception即可。有时需要定义非RuntimeException：当需要向调用方报告有这种类型的异常发生，以便调用方可根据抛出的异常类型进行相应的处理，尤其是在产品（相对于项目）代码中。
 16. 在service层，对于用户名为空或密码为空的异常，决定：抛出空指针异常，而非每个自己定义一个异常，因为它跟Java中的空指针异常类似，是明显的错误，而不像密码不正确这种不是错误，并且这种空异常在其他情形下也比较普遍，每个都自己定义一个新异常，没必要。这种做运行期异常处理，在Javadoc中提示调用者即可，不强制其处理（非运行期异常）。
 17. 有篇介绍Exception的文章讲的特别全面：http://blog.csdn.net/hguisu/article/details/6155636。
+18. 在进行Java程序设计的时候，需要关注Exception层次结构。这个层次结构又分解为两个分支：一个分支派生于RuntimeException的异常；另一个分支包含其他异常。划分两个分支的规则是：由程序错误导致的异常属性RuntimeException；曾经能够正确运行，而由于某些情况（例如，I/O错误）导致的异常不属于RuntimeException。
+RuntimeException：错误的类型转换、数组访问越界、访问空指针。
+19. “如果出现RuntimeException异常，就一定是你的问题” 是一条相当有道理的规则。应该通过检测数组下标是否越界来避免ArrayIndexOutOfBoundsException异常；应该通过在使用变量之前检测是否为空来杜绝NullPointerException异常的发生。
+非RuntimeException：试图在文件尾部后面读取数据、试图打开一个错误格式的URL、试图根据给定的字符串查找Class对象，而这个字符串表示的类并不存在。
 
 # 静态类和单态类
 1. 一个静态类（这里是指成员函数皆为static），使用它的一种情形是：调用者没有将它作为一个对象来考虑，而是把它认为是一个函数集合，也即函数编程，如三层架构中的service和dao。
