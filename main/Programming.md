@@ -32,6 +32,7 @@ eclipse设置：Window/Preferences/Java/Code Style/Formatter，点击“Edit”�
 19. CSS书写时，由外部属性向本身属性，然后再向内部属性写。
 20. 一个包可大可小，可根据系统的大小和复杂性来决定是否要划定为一个包。
 21. CSS中的class和id暂定使用小写，若由多个单词组成，则用中划线“-”分割。另外，命名和注释规范参见yiqusoft-site中index.htm和carousel.css的相关做法。
+22. 关于类的名称，排除纯工具类(几乎所有方法为static)，一般类名是一个名词，如DataProcessor、DataFilter等。
 
 ## 架构
 1. 从目前的发展趋势来看，像mis和erp之类的软件，采用js、ajax等异步请求响应的方式比使用JSP、Struts等传统的页面刷新的方式在客户体验(偏cs体验)、软件运行速度(取决于客户机的性能)、服务器端负载(客户机负责显示数据，控制显示格式等，这就将服务器解放出来了，服务器端只负责处理数据)等方面具有优势，所以作系统的时候可以使用js、jquery、extjs等来做。但做网站的话可以主要采用JSP、Struts等传统的页面刷新方式，在比较适合的地方使用js、jquery等，是非常好的。
